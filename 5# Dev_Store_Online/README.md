@@ -1,4 +1,4 @@
-# Developed  -  ٍStore Online (Symfony):
+# Developed  -  Store Online (Symfony):
 
 
 ## Description
