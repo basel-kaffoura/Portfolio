@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ma commande - La Boot'Ique{% endblock %}
+
+{% block body %}
+<h2>Je valide ma commande</h2>
+<div class="row">
+    <div class="col-md-6">
+        {% set formHtml %}
+            {{form_start(form, {action:path('order_add')})}}
+            {{ form_label(form.addresses, 'Choisissez votre adresse de livraison')}}
+            <a class="d-block mb-3" href="{{ path('account_address_new') }}">Ajouter nouvelle adresse</a>
+            {{form_end(form)}}
+        {% endset %}
+        {{ formHtml|replace({'[br]' : '<br>'})|raw }}
+    </div>
+    <div class="col-md-6">
+        <strong class="summary-label">Récapitulatif :</strong>
+        <div class="cart-summary">
+            {% for item in cart.products %}
+                <div class="row">
+                    <div class="col-2 my-auto"><img height="50px" src="/uploads/{{ item.product.image }}" alt="{{ item.product.name }}"></div>
+                    <div class="col-8 my-auto">{{ item.product.name }}</div>
+                    <div class="col-2 my-auto">x{{ item.quantity }}</div>
+                </div>
+            {% endfor %}
+            <hr>
+            <div class="row">
+                <div class="col-9 font-weight-bold">Total</div>
+                <div class="col-3 font-weight-bold">{{ (totalPrice / 100)|number_format(2,',','.') }} €</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

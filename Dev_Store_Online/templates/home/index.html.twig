@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h3>Top ventes du moment</h3>
+    <p>Découvrez nos articles les plus vendus du mois dernier</p>
+    <div class="row">
+        {% for product in top_products %}
+            <div class="col-md-4">
+                <div class="product-item">
+                    <a href="{{ path('product_show', {slug: product.slug}) }}"><img class="img-fluid" src="/uploads/{{product.image}}" alt="{{product.name}}"></a>
+                    <h5 class="mt-2">{{ product.name}}</h5>
+                    <span class="product-subtitle text-center">{{product.subtitle}}</span>
+                    <span class="product-price text-center">{{(product.price / 100 )|number_format(2,',', '.')}} € </span>
+                </div>
+            </div>
+        {% endfor %}
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7">
+            <h2 class="featurette-heading">Ne ratez pas notre <span class="text-muted">collection automne</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+            <img class="img-fluid" src="{{ asset('assets/img/woman.jpg') }}" alt="model woman">
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Promotions sur tous les rayons <span class="text-muted">hommes</span></h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+            <img class="img-fluid" src="{{ asset('assets/img/man.jpg') }}" alt="model man">
+        </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+{% endblock %}
