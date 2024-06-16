@@ -63,6 +63,6 @@ This project also includes support for Laravel Sail, which provides a Docker-bas
 
 ## Get In Touch
 
-- **email : baselkaffoura@gmail.com**
+- **Email : baselkaffoura@gmail.com**
 
 - **Phone : +971503898795**

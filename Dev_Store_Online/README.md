@@ -40,6 +40,6 @@ As an admin (role = "ROLE_ADMIN"), we can add products, modify banners, top prod
 	
 ## Get In Touch
 
-- **email : baselkaffoura@gmail.com**
+- **Email : baselkaffoura@gmail.com**
 
 - **Phone : +971503898795**	

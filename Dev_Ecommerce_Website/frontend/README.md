@@ -1,5 +1,5 @@
 # Vue.js
-Frontend Environment
+Frontend Framework
 
 ## Project Setup
 
@@ -24,6 +24,6 @@ npm run build
 
 ## Get In Touch
 
-- **email : baselkaffoura@gmail.com**
+- **Email : baselkaffoura@gmail.com**
 
 - **Phone : +971503898795**

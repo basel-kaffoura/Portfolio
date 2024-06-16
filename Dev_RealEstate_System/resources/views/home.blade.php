@@ -30,7 +30,7 @@
     <div class="row mt-5">
         <div class="col-12">
             <h2 class="text-center">About Our Business</h2>
-            <p class="text-center">Liberu Real Estate is revolutionizing the real estate industry with innovative tools and seamless workflows. Our platform empowers real estate professionals, property owners, and investors.</p>
+            <p class="text-center">The system is revolutionizing the real estate industry with innovative tools and seamless workflows. Our platform empowers real estate professionals, property owners, and investors.</p>
         </div>
     </div>
 </div>

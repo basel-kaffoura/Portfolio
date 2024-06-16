@@ -1,9 +1,10 @@
 # Developed  -  School Online Project (Laravel).
 
 
-## Introduction
-- School Management System is the system that manages students, teachers, classes, subjects, and many more. Here, the user can use the features of CRUD and manage students, teachers, subjects, and classes. Now talking about all the main functions of the system that is the feature to add, edit, delete, and view students, teachers, and classes. While adding a student, the user must provide full name, select gender, date of birth, select class, enrollment date, and parent's phone numbers. Additionally, students, teachers, classes, and subjects all have a unique and auto-generated number.
-      This sort of system may be used by middle and high schools to handle information in a methodical manner.
+## Description
+
+School Management System is the system that manages students, teachers, classes, subjects, and many more. Here, the user can use the features of CRUD and manage students, teachers, subjects, and classes. Now talking about all the main functions of the system that is the feature to add, edit, delete, and view students, teachers, and classes. While adding a student, the user must provide full name, select gender, date of birth, select class, enrollment date, and parent's phone numbers. Additionally, students, teachers, classes, and subjects all have a unique and auto-generated number.
+This sort of system may be used by middle and high schools to handle information in a methodical manner.
 
 
 ## Technology Stack
@@ -11,7 +12,7 @@
 -   **Framework:** Laravel
 -   **Template Engine:** Laravel Blade
 -   **Database:** MySQL
--   **Frontend:** HTML, CSS, Javascript and jQuery, etc.
+-   **Frontend:** HTML, CSS, Javascript, jQuery and Tailwind etc.
 
 
 ## Getting Started
@@ -27,7 +28,9 @@ To get started with the project, follow these steps:
 
 
 ## System Interfaces
-These interfaces will be actual interfaces through which the user will perform the desired tasks.
+
+**These interfaces will be actual interfaces through which the user will perform the desired tasks.**
+
 * Login System: maintaining the login information of a manager after validating the Email and Password. The Registering System is halted thus only the system managers can create new admin account in the system.
 * Classrooms Management Interface: Allows the managers to use the full CRUD features like adding new class and manage it.
 * Teachers Management Interface: Allows the managers to use the full CRUD features like adding new teacher, manage his information, as well as upload profile photo.
@@ -38,6 +41,6 @@ These interfaces will be actual interfaces through which the user will perform t
 
 ## Get In Touch
 
-- **email : baselkaffoura@gmail.com**
+- **Email : baselkaffoura@gmail.com**
 
 - **Phone : +971503898795**

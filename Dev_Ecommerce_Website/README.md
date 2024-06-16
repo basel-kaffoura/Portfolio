@@ -1,4 +1,4 @@
-# Developed  -  E-commerce Website (Laravel wit Vue.js)
+# Developed  -  E-commerce Website (Laravel with Vue.js)
 
 
 ## Description
@@ -103,6 +103,6 @@ Open: http://127.0.0.1:8000
 
 ## Get In Touch
 
-- **email : baselkaffoura@gmail.com**
+- **Email : baselkaffoura@gmail.com**
 
 - **Phone : +971503898795**

@@ -41,6 +41,6 @@ To get started with the project, follow these steps:
 
 ## Get In Touch
 
-- **email : baselkaffoura@gmail.com**
+- **Email : baselkaffoura@gmail.com**
 
 - **Phone : +971503898795**
