@@ -1,21 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ma commande - La Boot'Ique{% endblock %}
+{% block title %}My order - Basel Kaffoura{% endblock %}
 
 {% block body %}
-    <h2>Confirmation de votre commande</h2>
+    <h2>confirmation of your order</h2>
     <p>
-        Bonjour {{order.user.firstname}} {{order.user.lastname}}, <br>
-        Nous vous remercions de votre commande n° <b>{{order.reference}}</b>.<br>
-        Une confirmation vient de vous être envoyé par mail. <br>
+        Hello {{order.user.firstname}} {{order.user.lastname}}, <br>
+        Thank you for your order no. <b>{{order.reference}}</b>.<br>
+        A confirmation has just been sent to you by email. <br>
     </p>
     <hr>
     <p>
-        Votre commande sera livrée par {{order.carrierName}} à l'adresse suivante: <br>
+        Your order will be delivered by {{order.carrierName}} to the following address:<br>
         {{order.delivery|raw}}
     </p>
     <hr>
     <p>
-        Pour suive votre commande, rendez-vous dans votre <a href="{{ path('account_orders') }}">compte</a>.
+        To track your order, go to your<a href="{{ path('account_orders') }}">account</a>.
     </p>
 {% endblock %}

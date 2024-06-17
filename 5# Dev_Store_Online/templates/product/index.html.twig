@@ -1,15 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nos produits{% endblock %}
+{% block title %}Our products{% endblock %}
 
 {% block body %}
 <div class="row">
     <div class="col-md-3">
-        <h3 class="text-center">Rechercher</h3>
+        <h3 class="text-center">Research</h3>
         {{ form(form) }}
     </div>
     <div class="col-md-9">
-            <h3 class="text-center">Nos Produits</h3>
+            <h3 class="text-center">Our products</h3>
         <div class="row">
             {% for product in products %}
                 <div class="col-md-4">

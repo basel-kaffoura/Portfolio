@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes adresses - La Boot'Ique'{% endblock %}
+{% block title %}My addresses - Basel Kaffoura{% endblock %}
 
 {% block body %}
-    <a href="{{ path('account_address_new') }}" class="btn btn-info btn-sm float-right mt-2">Ajouter une adresse</a>
-    <h2>Gérer mes adresses</h2>
+    <a href="{{ path('account_address_new') }}" class="btn btn-info btn-sm float-right mt-2">Add an address</a>
+    <h2>Manage my addresses</h2>
 
     <div class="row mt-3">
         {% for address in app.user.addresses %}
@@ -19,16 +19,16 @@
                             {{ address.city }}<br>
                             {{ address.country }}
                         </p>
-                        <a href="{{ path('account_address_update', {id: address.id}) }}" class="card-link">Modifier</a>
-                        <a href="{{ path('account_address_delete', {id: address.id}) }}" class="card-link">Supprimer</a>
+                        <a href="{{ path('account_address_update', {id: address.id}) }}" class="card-link">Edit</a>
+                        <a href="{{ path('account_address_delete', {id: address.id}) }}" class="card-link">DELETE</a>
                     </div>
                 </div>
             </div>
         {% else %}
         <p>
-            Vous n'avez ajouté aucune adresse pour le moment.
+            You have not added any addresses yet.
         </p>
     {% endfor %}
     </div>
-    <a title="Retour vers votre espace membres"href="{{ path('account') }}">Retourner à mon compte</a>
+    <a title="Return to your members area"href="{{ path('account') }}">Return to my account</a>
 {% endblock %}

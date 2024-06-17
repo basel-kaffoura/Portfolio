@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ma commande - La Boot'Ique{% endblock %}
+{% block title %}My order - Basel Kaffoura{% endblock %}
 
 {% block body %}
-<h2>Mon récapitulatif</h2>
+<h2>My summary</h2>
 <div class="row">
     <div class="col-md-5">
-        <strong>Mon adresse de livraison</strong><br>
+        <strong>my delivery address</strong><br>
         <p>{{order.delivery|raw}}</p>
 
-        <strong>Transporteur</strong>
+        <strong>Carry</strong>
         <p>{{order.carrierName}}</p>
     </div>
     <div class="col-md-7">
-        <strong class="summary-label">Vos articles</strong>
+        <strong class="summary-label">Your articles</strong>
         <div class="cart-summary">
             {% for item in cart.products %}
                 <div class="row">
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <a href="{{ path('checkout', {reference: order.reference}) }}" class="btn btn-outline-success btn-block mt-4"><i class="bi bi-credit-card-2-back"></i> Payer</a>
+    <a href="{{ path('checkout', {reference: order.reference}) }}" class="btn btn-outline-success btn-block mt-4"><i class="bi bi-credit-card-2-back"></i> Pay</a>
 </div>
 
 {% endblock %}

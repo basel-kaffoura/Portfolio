@@ -1,21 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ma commande - La Boot'Ique{% endblock %}
+{% block title %}My order - Basel Kaffoura{% endblock %}
 
 {% block body %}
-<h2>Je valide ma commande</h2>
+<h2>I confirm my order</h2>
 <div class="row">
     <div class="col-md-6">
         {% set formHtml %}
             {{form_start(form, {action:path('order_add')})}}
             {{ form_label(form.addresses, 'Choisissez votre adresse de livraison')}}
-            <a class="d-block mb-3" href="{{ path('account_address_new') }}">Ajouter nouvelle adresse</a>
+            <a class="d-block mb-3" href="{{ path('account_address_new') }}">Add new address</a>
             {{form_end(form)}}
         {% endset %}
         {{ formHtml|replace({'[br]' : '<br>'})|raw }}
     </div>
     <div class="col-md-6">
-        <strong class="summary-label">Récapitulatif :</strong>
+        <strong class="summary-label">Summary :</strong>
         <div class="cart-summary">
             {% for item in cart.products %}
                 <div class="row">

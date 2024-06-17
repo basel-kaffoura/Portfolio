@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mes adresses - La Boot'Ique'{% endblock %}
+{% block title %}My addresses - Basel Kaffoura{% endblock %}
 
 {% block body %}
-    <h2 class="mb-4">Enregistrer une addresse</h2>
+    <h2 class="mb-4">Register an address</h2>
     {{form_start(form)}}
     <div class="row">
         <div class="col-md-12">{{form_row(form.name)}}</div>
@@ -19,5 +19,5 @@
     </div>
 
     {{form_end(form)}}
-    <a title="Retour vers votre espace membres"href="{{ path('account') }}">Retourner à mon compte</a>
+    <a title="Return to your members area"href="{{ path('account') }}">Return to my account</a>
 {% endblock %}

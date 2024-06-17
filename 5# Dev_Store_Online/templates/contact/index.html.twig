@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nous contacter - La Boot'Ique'{% endblock %}
+{% block title %}Contact us - Basel Kaffoura{% endblock %}
 
 {% block body %}
-    <h3 class="mb-3">Envoyez nous votre message</h3>
+    <h3 class="mb-3">Send us your message</h3>
     {{form(form)}}
     
     {% for message in app.flashes('notice') %}

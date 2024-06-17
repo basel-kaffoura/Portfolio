@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('product') }}">Produits</a>
+                <a class="nav-link" href="{{ path('product') }}">Products</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('about') }}">Qui sommes-nous ?</a>
+                <a class="nav-link" href="{{ path('about') }}">Who are we ?</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{ path('contact') }}">Contact</a>
@@ -19,19 +19,19 @@
         <ul class="navbar-nav">
             {% if app.user %}
                 <li class="nav-item active">
-                    <a class="nav-link fs-2" href="{{ path('account') }}">Mon compte <small class="text-secondary">({{ app.user.firstname}})</small></a>
+                    <a class="nav-link fs-2" href="{{ path('account') }}">My account <small class="text-secondary">({{ app.user.firstname}})</small></a>
                 </li>
                 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ path('app_logout') }}">Déconnexion</a>
+                    <a class="nav-link" href="{{ path('app_logout') }}">Disconnect</a>
                 </li>                
             {% else %}
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ path('register') }}">Inscription</a>
+                    <a class="nav-link" href="{{ path('register') }}">Registration</a>
                 </li> 
                 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ path('app_login') }}">Connexion</a>
+                    <a class="nav-link" href="{{ path('app_login') }}">Connection</a>
                 </li>                   
             {% endif %}
             <li class="nav-item active">
