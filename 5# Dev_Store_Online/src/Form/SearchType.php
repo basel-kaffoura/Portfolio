@@ -13,13 +13,13 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 
 /**
- * Formulaire de recherche sur la page produits
+ * Search form on product page
  */
 class SearchType extends AbstractType
 {
 
     /**
-     * Permet de paraméter un formulaire custom
+     * Allows you to configure a custom form
      *
      * @param OptionsResolver $resolver
      * @return void

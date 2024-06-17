@@ -16,12 +16,12 @@ use Symfony\Component\Routing\Annotation\Route;
 class PaymentController extends AbstractController
 {
     /**
-     * Etape de vérification avant confirmation du paiement
+     * Verification step before payment confirmation
      */
     #[Route('/commande/checkout/{reference}', name: 'checkout')]
     public function payment(OrderRepository $repository, $reference, EntityManagerInterface $em): Response
     {
-        // Récupération des produits de la dernière commande et formattage dans un tableau pour Stripe
+        // Retrieving products from the last order and formatting them into a table for Stripe
         $order = $repository->findOneByReference($reference);
         if (!$order) {
             throw $this->createNotFoundException('Cette commande n\'existe pas');
@@ -40,7 +40,7 @@ class PaymentController extends AbstractController
                 'quantity' => $item->getQuantity()
             ];
         }
-        // Ajout des frais de livraison
+        // Addition of delivery costs
         $productsForStripe[] = [
             'price_data' => [
                 'currency' => 'eur',
@@ -56,7 +56,7 @@ class PaymentController extends AbstractController
 
         $YOUR_DOMAIN = 'https://ecommerce.tristan-bonnal.fr';
         
-        // Création de la session Stripe avec les données du panier
+        // Creating the Stripe session with cart data
         $checkout_session = Session::create([
             'line_items' => $productsForStripe,
             'mode' => 'payment',
@@ -71,7 +71,7 @@ class PaymentController extends AbstractController
 
 
     /**
-     * Méthode appelée lorsque le paiement est validé
+     * Method called when payment is validated
      */
     #[Route('/commande/valide/{stripeSession}', name: 'payment_success')]
     public function paymentSuccess(OrderRepository $repository, $stripeSession, EntityManagerInterface $em, Cart $cart) 
@@ -85,7 +85,7 @@ class PaymentController extends AbstractController
             $em->flush();
         }
 
-        // Envoi mail de Confirmation
+        // Sending Confirmation email
         $user = $this->getUser();
 
         $content = "Bonjour {$user->getFirstname()} nous vous remercions de votre commande";
@@ -96,7 +96,7 @@ class PaymentController extends AbstractController
             $content
         );
 
-        // Suppression du panier une fois la commande validée
+        // Deleting the cart once the order has been validated
         $cart->remove();    
         return $this->render('payment/success.html.twig', [
             'order' => $order
@@ -104,7 +104,7 @@ class PaymentController extends AbstractController
     }
 
     /**
-     * Commande annullée (clic sur retour dans la fenêtre)
+     * Order canceled (click on return in the window)
      */
     #[Route('/commande/echec/{stripeSession}', name: 'payment_fail')]
     public function paymentFail(OrderRepository $repository, $stripeSession) 

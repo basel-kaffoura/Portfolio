@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * Espace membre (sécurisé)
+ * Member area (secure)
  */
 class AccountController extends AbstractController
 {
@@ -26,7 +26,7 @@ class AccountController extends AbstractController
     }
 
     /**
-     * Permet la modification du mot de passe d'un utilisateur sur une page dédiée
+     * Allows modification of a user's password on a dedicated page
      */
     #[Route('/compte/mot-de-passe', name: 'account_password')]
     public function changePassword(Request $request, UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $em): Response
@@ -62,7 +62,7 @@ class AccountController extends AbstractController
     }
 
     /**
-     * Affiche la vue de toutes les commandes d'un utilisateur
+     * Shows view of all orders for a user
      */
     #[Route('/compte/commandes', name: 'account_orders')]
     public function showOrders(OrderRepository $repository): Response
@@ -74,7 +74,7 @@ class AccountController extends AbstractController
     }
 
     /**
-     * Affiche une commande
+     * Display an order
      */
     #[Route('/compte/commandes/{reference}', name: 'account_order')]
     public function showOrder(Order $order): Response

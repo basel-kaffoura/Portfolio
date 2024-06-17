@@ -15,8 +15,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 
 /**
- * Formulaire d'inscription créé manuellement
- * Une fois inscris, l'utilisateur est automatiquement authentifié.
+	* Manually created registration form
+	* Once registered, the user is automatically authenticated.
  */
 class RegisterController extends AbstractController
 {
@@ -34,11 +34,11 @@ class RegisterController extends AbstractController
             $em->persist($user);
             $em->flush();
 
-            // Envoi mail confirmation
+            // Send confirmation email
             $content = "Bonjour {$user->getFirstname()} nous vous remercions de votre inscription";
             (new Mail)->send($user->getEmail(), $user->getFirstname(), "Bienvenue sur la Boot'ique", $content);
 
-            // Loggin auto
+            // Auto login
             return $userAuthenticator->authenticateUser(
                 $user,
                 $authenticator,

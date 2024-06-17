@@ -20,17 +20,17 @@ class CarrierCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name', 'Nom'),
+            TextField::new('name', 'Name'),
             TextareaField::new('description'),
-            MoneyField::new('price', 'Prix')->setCurrency('EUR')
+            MoneyField::new('price', 'Price')->setCurrency('EUR')
         ];
     }
 
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInSingular('Transporteur')
-            ->setEntityLabelInPlural('Transporteurs')
+            ->setEntityLabelInSingular('Carrier')
+            ->setEntityLabelInPlural('Carriers')
         ;
     }
 

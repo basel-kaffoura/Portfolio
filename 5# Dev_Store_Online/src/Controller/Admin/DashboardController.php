@@ -31,18 +31,18 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('La Boot\'Ique');
+            ->setTitle('Basel Kaffoura');
 
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linkToDashboard('Tableau de bord', 'fa fa-home');
-        yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-user', User::class);
-        yield MenuItem::linkToCrud('Catégories', 'fas fa-list', Category::class);
-        yield MenuItem::linkToCrud('Produits', 'fas fa-tag', Product::class);
-        yield MenuItem::linkToCrud('Transporteurs', 'fas fa-truck', Carrier::class);
-        yield MenuItem::linkToCrud('Commandes', 'fas fa-shopping-cart', Order::class);
-        yield MenuItem::linkToCrud('Bannières', 'fas fa-desktop', Headers::class);
+        yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
+        yield MenuItem::linkToCrud('Users', 'fas fa-user', User::class);
+        yield MenuItem::linkToCrud('Categories', 'fas fa-list', Category::class);
+        yield MenuItem::linkToCrud('Products', 'fas fa-tag', Product::class);
+        yield MenuItem::linkToCrud('Carrier', 'fas fa-truck', Carrier::class);
+        yield MenuItem::linkToCrud('Orders', 'fas fa-shopping-cart', Order::class);
+        yield MenuItem::linkToCrud('Banners', 'fas fa-desktop', Headers::class);
     }
 }

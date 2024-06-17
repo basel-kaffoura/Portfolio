@@ -16,7 +16,7 @@ class HomeController extends AbstractController
         $products = $productRepository->findByIsInHome(1);
         $headers = $headersRepository->findAll();
         return $this->render('home/index.html.twig', [
-            'carousel' => true,  //Le caroussel ne s'affiche que sur la page d'accueil (voir base.twig)
+            'carousel' => true,  //The carousel is only displayed on the home page (see base.twig)
             'top_products' => $products,
             'headers' => $headers
         ]);

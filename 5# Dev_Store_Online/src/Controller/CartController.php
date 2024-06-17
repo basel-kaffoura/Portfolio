@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CartController extends AbstractController
 {
     /**
-     * Récupère un panier détaillé contenant des objets Products et les totaux de quantité et de prix 
+     * Retrieves a detailed shopping cart containing Products objects and quantity and price totals
      * 
      * @param Cart $cart
      * @return Response
@@ -28,7 +28,7 @@ class CartController extends AbstractController
     }
 
     /**
-     * Ajoute un article au panier (id du produit) et incrémente la quantitée (voir classe Cart)
+     * Add an item to the cart (product id) and increment the quantity (see Cart class)
      * @param Cart $cart
      * @param int $id
      * @return Repsonse
@@ -41,7 +41,7 @@ class CartController extends AbstractController
     }
 
     /**
-     * Réduit de 1 la quantité pour un article du panier
+     * Reduces the quantity of an item in the cart by 1
      * @param Cart $cart
      * @param int $id
      * @return Repsonse
@@ -54,7 +54,7 @@ class CartController extends AbstractController
     }
     
     /**
-     * Supprime une ligne d'articles du panier
+     * Remove a row of items from the cart
      *
      * @param Cart $cart
      * @return Response
@@ -67,7 +67,7 @@ class CartController extends AbstractController
     }
 
     /**
-     * Vide le panier entièrement
+     * Empty the basket completely
      *
      * @param Cart $cart
      * @return Response

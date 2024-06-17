@@ -9,7 +9,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
 /**
- * make:auth utilisé pour la connexion
+ * make:auth used for connection
  */
 class SecurityController extends AbstractController
 {

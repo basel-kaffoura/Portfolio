@@ -19,8 +19,8 @@ class HeadersCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInSingular('Bannière')
-            ->setEntityLabelInPlural('Bannières')
+            ->setEntityLabelInSingular('Banner')
+            ->setEntityLabelInPlural('Banners')
             ->setDefaultSort(['id' => 'DESC'])
         ;
     }
@@ -29,10 +29,10 @@ class HeadersCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('title', 'Titre'),
-            TextareaField::new('content', 'Contenu'),
-            TextField::new('btnTitle', 'Titre bouton'),
-            TextField::new('btnUrl', 'Url bouton'),
+            TextField::new('title', 'Title'),
+            TextareaField::new('content', 'Content'),
+            TextField::new('btnTitle', 'Title button'),
+            TextField::new('btnUrl', 'Url button'),
             ImageField::new('image')
                 ->setBasePath('uploads/')
                 ->setUploadDir('public/uploads/')

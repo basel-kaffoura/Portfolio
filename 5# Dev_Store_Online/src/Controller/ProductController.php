@@ -16,7 +16,7 @@ class ProductController extends AbstractController
     public function index(ProductRepository $repository, Request $request): Response
     {
        
-        // Si recherche exécutée, $products contiendra les résultats filtrés
+        // If search executed, $products will contain the filtered results
         $search = new Search();
         $form = $this->createForm(SearchType::class, $search);
         $form->handleRequest($request);

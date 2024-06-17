@@ -16,7 +16,7 @@ class AddressController extends AbstractController
     #[Route('compte/adresses', name: 'account_address')]
     public function index(): Response
     {
-        // Adresses récupérées directement dans la vue grâce à app.user
+        // Addresses retrieved directly in the view using app.user
         return $this->render('account/address.html.twig', [
         ]);
     }
@@ -34,7 +34,7 @@ class AddressController extends AbstractController
 
             $em->persist($address);
             $em->flush();
-            if ($session->get('order') === 1) {       //Redirection vers la commande si celle-ci a été amorcée
+            if ($session->get('order') === 1) {       //Redirection to the command if it has been initiated
                 $session->set('order', 0);
                 return $this->redirectToRoute('order');
             }

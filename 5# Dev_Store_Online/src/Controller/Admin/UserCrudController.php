@@ -24,16 +24,16 @@ class UserCrudController extends AbstractCrudController
             IdField::new('id')->hideOnForm(),
             EmailField::new('email'),
             ArrayField::new('roles', 'Rôle')->hideOnIndex(),
-            TextField::new('firstname', 'Prénom'),
-            TextField::new('lastname', 'Nom'),
+            TextField::new('firstname', 'Basel'),
+            TextField::new('lastname', 'Kaffoura'),
         ];
     }
 
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setEntityLabelInSingular('Utilisateur')
-            ->setEntityLabelInPlural('Utilisateur')
+            ->setEntityLabelInSingular('User')
+            ->setEntityLabelInPlural('User')
         ;
     }
 }

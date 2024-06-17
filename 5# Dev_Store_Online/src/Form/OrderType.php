@@ -21,7 +21,7 @@ class OrderType extends AbstractType
                 'label' => false,
                 'required' => true,
                 'class' => Address::class,
-                'choice_label' => 'addressLabel', //callback récupérant une chaine concaténée
+                'choice_label' => 'addressLabel', //callback retrieving a concatenated string
                 'choices' => $user->getAddresses(),
                 'expanded' => true
             ])
@@ -44,7 +44,7 @@ class OrderType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'user' => []        // Récupère la variable user passée dans le contoller pour la transmettre aux options du buildForm
+            'user' => []        // Retrieves the user variable passed into the contoller to pass it to the buildForm options
         ]);
     }
 }
