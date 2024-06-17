@@ -1,4 +1,4 @@
-
+.env
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -8,7 +8,6 @@
 /public/bundles/
 /var/
 /vendor/
-.env
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
