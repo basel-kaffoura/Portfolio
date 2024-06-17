@@ -7,7 +7,7 @@
 /var/
 /vendor/
 /.idea
-/TEMPS
+/TEMPS/
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###
