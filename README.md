@@ -1,6 +1,6 @@
 # Project Portfolio
 
-Welcome to my project portfolio showcasing various web applications developed using Laravel and Symfony frameworks, each tailored to meet specific industry needs.
+Welcome to my project portfolio showcasing various web applications developed using Laravel framework, each tailored to meet specific industry needs.
 
 ## Projects Overview
 
