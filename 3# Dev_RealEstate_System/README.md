@@ -30,22 +30,6 @@ All about Real Estate System, it is not just a software solution for property ma
 5. Migrate the database tables with `php artisan migrate`
 6. Start the development server with `php artisan serve`.
 
-## Building with Docker
-
-Alternatively, you can build and run the project using Docker. To build the Dockerfile, follow these steps:
-
-1. Ensure you have Docker installed on your system.
-2. Open a terminal in the project folder.
-3. Ensure your `.env` file is correctly configured with your database connection details before running migrations.
-4. Run the following command to build the Docker image:
-   ```
-   docker build -t Dev_RealEstate_System
-   ```
-5. Once the image is built, you can run the container with:
-   ```
-   docker run -p 8000:8000 Dev_RealEstate_System
-   ```
-
 
 ## Using Laravel Sail
 
