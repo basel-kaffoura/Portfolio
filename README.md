@@ -43,31 +43,7 @@ Empowering real estate professionals with a comprehensive management system buil
 - **Admin Panel:** Powerful tools for managing properties and transactions.
 - **Analytics:** Detailed insights into property performance.
 
-### 4. Dev_Hotel_Reservation
-
-#### Overview
-
-A sophisticated hotel reservation system developed with Symfony, enhancing guest booking experiences.
-
-#### Key Features
-
-- **Easy Admin Interface:** Simplified reservation management.
-- **Guest Services:** Smooth check-ins and check-outs.
-- **Business Insights:** Reporting and analytics for performance tracking.
-
-### 5. Dev_Store_Online
-
-#### Overview
-
-A robust online store powered by Symfony, featuring seamless payment integration and intuitive admin capabilities.
-
-#### Key Features
-
-- **Product Management:** Admin dashboard for easy inventory and order management.
-- **Secure Transactions:** Integrated Stripe for safe and reliable payments.
-- **Communication:** Email notifications using Mailjet for order updates.
-
-### 6. Dev_School_Online
+### 4. Dev_School_Online
 
 #### Overview
 
