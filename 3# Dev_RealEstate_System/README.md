@@ -1,4 +1,4 @@
-# Developed  -  Real Estate System (Laravel with Livewire, Filament and Sail)
+# Developed  -  Real Estate System (Laravel)
 
 
 ## Description
